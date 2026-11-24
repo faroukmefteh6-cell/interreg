@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 248 248; --surface: 255 255 255; --ink: 20 35 43; --muted: 86 102 110; --line: 213 221 224;
+  --accent: 12 107 92; --accent-soft: 220 239 234;
+  --env: 47 125 79; --soc: 185 119 14; --eco: 42 98 168; --leg: 122 74 160; --tec: 12 127 140;
+  --env-soft: 225 241 231; --soc-soft: 247 234 210; --eco-soft: 220 232 246; --leg-soft: 235 224 243; --tec-soft: 217 239 241;
+  --ok: 47 125 79; --warn: 185 119 14; --bad: 180 50 50;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: 15 26 31; --surface: 22 35 41; --ink: 228 236 237; --muted: 147 165 171; --line: 42 59 66;
+    --accent: 79 194 173; --accent-soft: 27 58 56;
+    --env: 111 192 140; --soc: 224 166 66; --eco: 127 176 234; --leg: 191 148 224; --tec: 92 198 211;
+    --env-soft: 28 51 38; --soc-soft: 58 47 23; --eco-soft: 27 45 68; --leg-soft: 45 33 57; --tec-soft: 22 52 58;
+    --ok: 111 192 140; --warn: 224 166 66; --bad: 235 120 120;
+    color-scheme: dark;
+  }
+}
+body { @apply bg-bg text-ink font-sans antialiased; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { @apply outline outline-2 outline-offset-2 outline-accent; }
+.tnum { font-variant-numeric: tabular-nums; }
